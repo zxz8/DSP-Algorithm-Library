@@ -14,7 +14,11 @@ This template class supports the caller with a basic interface to extract and wr
 ## Cepstrum
 Like most of the mathematical classes this class also has only static members so no explicite instanciation is necessary. The cepstrum class implement like the name says, the  cepstral analysis methods. This function calcualtes the cepstrum for the given time domain signal. The real cepstrum will be calculated corresponding folowing formular: Cepstrum = ABS ( IFFT ( LOG ( ABS ( FFT ( x) ) ) ). Note that the resulting cepstrum will be calculated via an zero-padded fast-fourier-transformation, which has in the back-transformation a symetry and therefore the resulting cepstrum will be have at the end an zero zone.
 ![alt text](__IMAGES/cep.png)
-  
+
+## Short Time Fourier Transformation
+This class implements only one static function for the extraction of the so-called spectrogram, aka the sonogram or power spectrum of the short time Fourier transformation. The function allocates a two-dimensional array for itself and try to work as autonomous as possible. The resulting array can be accessed with spectrogram[time][frequency].
+![alt text](__IMAGES/stft.png)
+
 ## Cohen Class Distributions
 
 ### Smoothed Pseudo Wigner Ville Distribution
@@ -96,10 +100,6 @@ This class implements a static function for the calculation of the polygonal cha
 
 ## Sample rate Converter
 This class is a simple c++ wrapper to the sample rate converter c function collection defined into the sample_rate_converter files. The functions offer a sample rate conversion with three different methods. The SRC_LINEAR and the SRC_ZERO_ORDER_HOLD methods are really fast but so bad in the results that the usage of the SRC_SINC_FASTEST should be the best solution in the most cases...
-
-## Short Time Fourier Transformation
-This class implements only one static function for the extraction of the so-called spectrogram, aka the sonogram or power spectrum of the short time Fourier transformation. The function allocates a two-dimensional array for itself and try to work as autonomous as possible. The resulting array can be accessed with spectrogram[time][frequency].
-![alt text](__IMAGES/stft.png)
  
 ## Smooth
 Smoothing algorithms. See the corresponding header files for more details.
