@@ -60,10 +60,13 @@ Not fully implented so far.
 This class supports a collection of useful functions for the impulse response extraction with the sine sweep technique. Like all the other mathematical functions, this class has only static function members. If the sweep response is recorded, a deconvolution function be called for extraction of either the transfer function of the impulse response of the system. This function generates an exponential sweep sine signal with the desired max amplitude. A special flag can be used to extract a linear sweeped signal. For a core sine signal without the sweep, set the start and end frequency to the same value.
 
 ## Jitter Analysis
+The definition of the Jitter in this case is not like the Jitter definition in digital audio. We understood Jitter as a micro oscillation of the frequency peak in a band, which can be used to detect variation in some transmission gears or other static signals with fluctuations in the long time analysis. This static function extracts the frequency peak Jitter for a given frequency band from a time domain based signal. The result is the frequency peak Jitter in Hz. This implementation here uses no kind of which craft ;-) it a simple and easy implementation which uses the Linear Predictive Coding to calculate the spectrum. By default, this function returns the Jitter in Hz from window to window. Instead, to see the difference it is possible to track the peak value.
 
 ## Linear Predictive Coding
+The objective of linear prediction is to form a model of a linear time-invariant digital system thought observation of input and output sequences. The implementation of the prediction coefficient extraction here serves after the Levinson Durbin implementation to solve the matrix system. Please Note: The number of LPC Coefficients used to predict the future vector must be shorter than the number of previous samples used to extract the LP Coefficients !!! An Assertion in the code will check this. In release versions, the usage of more LP-Coefficients as the previous samples will cause an access violation !!!
 
 ## Median Frequency
+This class implements two static member functions for the calculation of the median frequency for either a time domain or a frequency domain input signal. The median frequency is the frequency where the integral on the left side is equal to the integral of the Right side. This function calculates the median frequency of a spectrum. The median frequency is the frequency in the spectrum where the integral on the right side is equal to the integral on the left side. This function can be used for example to make a decision for the high of a signal or try to differ between a high and a low frequency distributed signal.
 
 ## Normalization
 
