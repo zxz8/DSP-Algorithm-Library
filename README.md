@@ -51,8 +51,13 @@ This class implements a envelope calculation based on the Hilbert transformation
 This file contains the "KING OF THE ALGORITHMS", a few FFT routines, including a real-FFT routine that is almost twice as fast as a normal complex FFT, and a power spectrum routine when you know you don't care about phase information. The basic algorithm for his code was based on Numerical Recipes in FORTRAN. I optimized his code further by reducing array accesses, caching the bit reversal table, and eliminating float-to-double conversions, and I added the routines to calculate a real FFT and a real power spectrum. Note that all this functions need an output data array pre  allocation ! This implementation can massively make sense of the compiler optimization, so the  compiler should be called with the "-O3" option to increase the speed performance. We implement  here mostly the standard algorithm, which goes back to the work of L.W. Cooley and J.W. Turkey in the mid-1960s. For performance reasons we put the algorithm in each own of the tree implementations (Complex, Real, and Power) and do  not make use of some outsourced function. This should give us the fastest implementation. Please note that all the algorithms here work only with a vector length from a power of two. The class collection was extended by a discrete Fourier transformation (DFT) also, which has the same signature as the FFT and can be used to compute transformations with a length which is not a power of two.
 
 ## Harmonic Analyze 
+This class implements functions for the harmonic analyze. Like all other mathematical classes, this class collects static functions. The harmonic analyze function tries to find a fundamental frequency in a given search interval and extracts the levels of the harmonic followers. The resulting return values are all in decibel (dB) level dimensions, apart from the frequency return values.
+
+## Harmonic Base Frequency Finder
+Not fully implented so far.
 
 ## Impulse Response Extraction 
+This class supports a collection of useful functions for the impulse response extraction with the sine sweep technique. Like all the other mathematical functions, this class has only static function members. If the sweep response is recorded, a deconvolution function be called for extraction of either the transfer function of the impulse response of the system. This function generates an exponential sweep sine signal with the desired max amplitude. A special flag can be used to extract a linear sweeped signal. For a core sine signal without the sweep, set the start and end frequency to the same value.
 
 ## Jitter Analysis
 
