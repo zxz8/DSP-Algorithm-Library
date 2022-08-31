@@ -62,8 +62,8 @@ public:
   * @param   N      the length of the vector should be a power of two
   * @return         the wavelet domain vector will be allocated into the algorithm
   *                 and has the same size as the input vector, the size N. This array
-	* 								is no inplace implementation, this means the vector newly allocated
-	*									into this function and the original input vector is not overwritten.
+  *                 is no inplace implementation, this means the vector newly allocated
+  *	            into this function and the original input vector is not overwritten.
   */
   static double* doWaveletTransformation(const real* in, const char* art, const int range, const int N);
 
