@@ -118,7 +118,7 @@ This class file defines an wavelet transformation implemented with the pyramid m
 This class implements a staic function for the calculation of the zero crossing rate for a given signal.
 
 ## Math Utilities
-Useful function for example de/logarithmization...
+Some useful functions, for example de/logarithmization...
 
 ## Build instructions for the test routines on the Linux Raspberry Pi (64bit) architecture
 ```
