@@ -119,3 +119,17 @@ This class implements a staic function for the calculation of the zero crossing 
 
 ## Math Utilities
 Useful function for example de/logarithmization...
+
+## Build instructions for the test routines on the Linux Raspberry Pi (64bit) architecture
+```
+git clone https://github.com/Christoph-Lauer/DSP-Algorithm-Library.git
+cd DSP-Algorithm-Library
+make
+```
+
+## Build instructions for  the test routines on the ARM-based Apple MacOS M architecture
+comming soon... 
+
+## Build instructions  the test routines for Linux
+comming soon...
+
