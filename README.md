@@ -112,7 +112,7 @@ This class implements an dynamic tree wavelet package transformation for multipl
 ![alt text](__IMAGES/wpt.png)
 
 ## Wavelet Transformation
-This class file defines an wavelet transformation implemented with the pyramid multiresolution algorithmus. As most of the mathicatical classes the functions here are all defined as static functions so no instantiation is necessary.
+This class file defines an wavelet transformation implemented with the pyramid multiresolution algorithmus. As most of the mathicatical classes the functions here are all defined as static functions so no instantiation is necessary. The core of the transformation is defined as static class. As folow the list of possible wavelets where the filer pairs are hard coded inti the header file. b18, c06, c12, c18, c24, c30, d01, d04, d06, d08, d10, d12, d14, d16, d18, d20, v24.
  
 ## Zero Crossing Rate
 This class implements a staic function for the calculation of the zero crossing rate for a given signal.
